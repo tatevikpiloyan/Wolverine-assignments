@@ -14,8 +14,8 @@ L2:	mov eax, DWORD PTR[rbp - 8]
 	add DWORD PTR[rbp - 12], eax
 	add DWORD PTR[rbp - 8], 1
 
-L1: cmp DWORD PTR[rbp - 8], DWORD PTR[rbp - 4]
-    jl L2
+L1:	cmp DWORD PTR[rbp - 8], DWORD PTR[rbp - 4]
+    	jl L2
 
 	pop rbp
 	ret

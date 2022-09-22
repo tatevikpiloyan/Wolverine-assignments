@@ -3,13 +3,12 @@
 	mov DWORD PTR[rbp - 4], 6
 	mov DWORD PTR[rbp - 8], 10
 	mov eax, DWORD PTR[rbp - 4]
-	mov ebx, DWORD PTR[rbp - 8]
-	cmp eax, ebx
+	cmp eax, DWORD PTR[rbp - 8]
 	ja L1
-	cout y
+	cout DWORD PTR[rbp - 8]
 
-end: pop ebp
-	 ret
+end:	pop ebp
+	ret
 
-L1: cout x
+L1: 	cout eax
 	jmp end
