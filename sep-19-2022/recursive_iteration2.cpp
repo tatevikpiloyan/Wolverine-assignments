@@ -7,8 +7,7 @@ int main()
 	std::cin >> iter;
 	int num = 0;
 iteration:
-	std::cout << num << std::endl;
-	++num;
+	std::cout << num++ << std::endl;
 	if (num <= iter)
 		goto iteration;
 }
