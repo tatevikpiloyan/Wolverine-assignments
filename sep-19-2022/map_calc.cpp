@@ -20,26 +20,11 @@ int main()
 	result.insert(std::make_pair('-', my_sub));
 	result.insert(std::make_pair('*', my_mul));
 	result.insert(std::make_pair('/', my_div));
-	if (auto key = result.find(ch); key != result.end())
-	{
-		std::cout << key->second(num1, num2) << std::endl;
-	}
-	else if (auto key = result.find(ch); key != result.end())
-	{
-		std::cout << key->second(num1, num2) << std::endl;
-	}
-	else if (auto key = result.find(ch); key != result.end())
-    {
-		std::cout << key->second(num1, num2) << std::endl;
-    }
-	else if (auto key = result.find(ch); key != result.end())
-    {
-		std::cout << key->second(num1, num2) << std::endl;
-    }
+	auto ptr = result[ch];
+	if (ptr)
+		std::cout << ptr(num1, num2) << std::endl;
 	else
-	{
 		std::cout << "Wrong operation!" << std::endl;
-	}
 }
 
 int my_sum(int a, int b)
