@@ -8,8 +8,8 @@
 	ja L1
 	cout y
 
-end: pop ebp
-	 ret
+end:	pop ebp
+	ret
 
-L1: cout x
+L1: 	cout x
 	jmp end
