@@ -4,7 +4,7 @@
 	mov DWORD PTR[rbp - 8], 10
 	mov eax, DWORD PTR[rbp - 4]
 	cmp eax, DWORD PTR[rbp - 8]
-	ja L1
+	jg L1
 	cout DWORD PTR[rbp - 8]
 
 end:	pop ebp
