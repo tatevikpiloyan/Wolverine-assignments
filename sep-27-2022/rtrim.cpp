@@ -1,12 +1,12 @@
 #include <iostream>
-#include <string>
+
 std::string rtrim(std::string&);
 
 int main()
 {
 	std::string str;
 	getline(std::cin, str);
-	std::cout << rtrim(str) << "||||||||||" << std::endl;
+	std::cout << rtrim(str) << std::endl;
 }
 
 std::string rtrim(std::string& str)
@@ -23,6 +23,6 @@ std::string rtrim(std::string& str)
 			break;
 		}
 	}
-	str.erase(str.size() - count, str.size() - 1);
+	str.erase(str.size() - count, count);
 	return str;
 }

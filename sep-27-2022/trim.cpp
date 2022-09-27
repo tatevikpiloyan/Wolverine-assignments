@@ -6,14 +6,13 @@ int main()
 {
 	std::string str;
 	getline(std::cin, str);
-	std::cout << trim(str) << "||||||||" << std::endl;
-
+	std::cout << trim(str) << std::endl;
 }
 
 std::string trim(std::string& str)
 {
-	int l_count;
-	int r_count;
+	int l_count = 0;
+	int r_count = 0;
 	int size = str.size();
 	for (int i = size - 1; i >= 0; --i)
 	{
@@ -37,7 +36,7 @@ std::string trim(std::string& str)
 			break;
 		}
 	}
-	str.erase(str.size() - r_count, r_count);
+	str.erase(size - r_count, r_count);
 	str.erase(0, l_count);
 	return str;
 }
