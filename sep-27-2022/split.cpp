@@ -19,7 +19,7 @@ int main()
 	}
 }
 
-std::vector <std::string> split(const std::string& str, std::string& spliter)
+std::vector<std::string> split(const std::string& str, std::string& spliter)
 {
 	std::vector<std::string> nstr;
 	std::string tstr;
@@ -27,9 +27,13 @@ std::vector <std::string> split(const std::string& str, std::string& spliter)
 	{
 		if (spliter.find(str[i]) != -1)
 		{
-			nstr.push_back(tstr);
-			tstr = {};
-			continue;
+			if (tstr != "")
+            {
+			    nstr.push_back(tstr);
+			    tstr.clear();
+			    continue;
+            }
+            continue;
 		}
 		tstr.push_back(str[i]);
 	}
