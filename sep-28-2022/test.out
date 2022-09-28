@@ -1,0 +1,9 @@
+mov
+r1
+12
+mov
+r2
+34
+add
+r1
+r2
