@@ -4,7 +4,7 @@ void memset(void*, char val, size_t count);
 
 int main()
 {
-    char arr[4];
+    char arr[10];
     memset(arr, '~', 4);
     std::cout << arr << std::endl;
 }
@@ -12,7 +12,7 @@ int main()
 void memset(void* str, char val, size_t count)
 {
     int i = 0;
-    while (i < count - 1)
+    while (i < count)
     {
          *((char*)str + i) = val;
          ++i;
